@@ -1,99 +1,180 @@
 "use client";
+
 import { useState } from "react";
-import PageHero from "@/components/PageHero";
 import Link from "next/link";
 
-const faqs = [
-  {
-    q: "What is invoice factoring?",
-    a: "Invoice factoring (also called accounts receivable factoring) is a financial transaction where a business sells its outstanding invoices to a factoring company at a discount in exchange for immediate cash. Instead of waiting 30, 60, or 90 days for clients to pay, you get most of that money upfront.",
-  },
-  {
-    q: "How is factoring different from a bank loan?",
-    a: "Unlike a bank loan, factoring is not debt — it's the sale of an asset (your invoice). Because of this, it doesn't appear as debt on your balance sheet. Approval is based on your clients' creditworthiness, not yours, making it accessible to newer businesses or those with imperfect credit.",
-  },
-  {
-    q: "How much of the invoice value will I receive?",
-    a: "Typically, UC Funding advances 80–90% of the invoice value upfront. Once your client pays the invoice in full, you receive the remaining balance minus our small factoring fee.",
-  },
-  {
-    q: "How quickly can I receive funding?",
-    a: "After your account is set up and invoices are verified, funding is typically processed within 24–48 hours. Initial setup may take a few days depending on the information provided.",
-  },
-  {
-    q: "What types of businesses qualify for factoring?",
-    a: "Most B2B (business-to-business) and B2G (business-to-government) businesses that invoice creditworthy clients can qualify. The key factors are the creditworthiness of your clients and that the invoices are for completed work or delivered goods.",
-  },
-  {
-    q: "Do I have to factor all of my invoices?",
-    a: "No. UC Funding offers flexible programs that allow you to choose which invoices to factor. You are not required to factor every invoice you issue.",
-  },
-  {
-    q: "What does it cost?",
-    a: "Factoring fees vary based on your industry, invoice volume, and client payment terms. Because UC Funding is bank-owned, we are able to offer very competitive rates. Contact us for a personalized quote.",
-  },
-  {
-    q: "How does being bank-owned benefit me?",
-    a: "As a subsidiary of Gulf Coast Bank & Trust Company, we do not rely on outside investors for capital. This gives us a lower cost of funds that we pass directly to our clients in the form of lower factoring rates. It also means greater financial stability and reliability.",
-  },
-  {
-    q: "Will my clients know I am factoring?",
-    a: "In most cases, yes — your clients will be notified that invoices have been assigned to UC Funding and that payment should be directed to us. This is standard practice in the industry and is viewed as a normal business arrangement.",
-  },
-  {
-    q: "Is there a minimum or maximum amount I can factor?",
-    a: "We work with businesses of various sizes. There is no strict minimum, and we can accommodate high-volume clients as well. Contact us to discuss your specific needs.",
-  },
-];
-
-function FaqItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden mb-3">
-      <button
-        className="w-full flex items-center justify-between px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="font-semibold text-blue-900 pr-4">{q}</span>
-        <svg className={`w-5 h-5 text-blue-900 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      {open && (
-        <div className="px-6 pb-5 pt-2 bg-blue-50 border-t border-gray-100">
-          <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function FaqsPage() {
+  const faqs: { q: string; a: React.ReactNode }[] = [
+    {
+      q: "Is United Capital Funding the same as United Capital or the company sending fax loan offers?",
+      a: (
+        <div className="grid md:grid-cols-2 gap-6">
+          <p className="text-sm font-bold text-gray-800 leading-relaxed">
+            No. United Capital Funding is not affiliated with any entity calling itself &ldquo;United Capital&rdquo; that is
+            sending unsolicited fax loan offers.
+          </p>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            We do not send loan offers via fax and do not request sensitive information through unsecure
+            methods. If you received one of these faxes, we recommend that you do not respond. If you feel
+            that this fax is fraudulent, report it to the FTC at{" "}
+            <a
+              href="https://reportfraud.ftc.gov"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#2d5c27" }}
+              className="underline"
+            >
+              www.reportfraud.ftc.gov
+            </a>
+            .
+          </p>
+        </div>
+      ),
+    },
+    {
+      q: "What is factoring (accounts receivable financing)?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Invoice factoring is the purchase of accounts receivable. A factoring company purchases your outstanding invoices and advances you a percentage of the invoice value immediately — typically 80–90%. Once your customer pays the invoice, you receive the remaining balance minus a small factoring fee. It is not a loan.</p>,
+    },
+    {
+      q: "What is the difference between a factor and a broker?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">A factoring company directly purchases your invoices and provides funding from its own capital. A broker acts as an intermediary, referring you to a factoring company and earning a commission. United Capital Funding is a direct factor — we fund directly from our own capital with no middlemen.</p>,
+    },
+    {
+      q: "How is factoring different from a traditional bank loan?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Factoring is the sale of an asset, not a loan. It does not add debt to your balance sheet. Approval is based primarily on the creditworthiness of your customers, not your business. This means startups, businesses with limited credit history, or companies with past financial difficulties may still qualify.</p>,
+    },
+    {
+      q: "Can I factor if I have an outstanding bank loan or line of credit?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">In many cases, yes. If your bank holds a lien on your accounts receivable, they may need to subordinate or release that lien before factoring can begin. United Capital Funding has extensive experience working through these situations and can guide you through the process.</p>,
+    },
+    {
+      q: "Who is United Capital Funding owned by?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">United Capital Funding Group LLC is a wholly owned subsidiary of Gulf Coast Bank &amp; Trust Company, an FDIC-insured financial institution headquartered in New Orleans, Louisiana.</p>,
+    },
+    {
+      q: "What is United Capital Funding's source of capital?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Our capital comes directly from Gulf Coast Bank &amp; Trust Company, our FDIC-insured parent bank. This means we do not rely on outside investors or hedge funds for our funding — providing stability and competitive rates for our clients.</p>,
+    },
+    {
+      q: "What industries does United Capital Funding work in?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">We serve a wide range of B2B and B2G industries including staffing, government contracting, manufacturing, information technology, security guard companies, and service businesses. If your business invoices creditworthy customers, we can likely help.</p>,
+    },
+    {
+      q: "What are UC Funding's fees?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Our factoring fees are competitive and transparent with no hidden add-on charges. Unlike many competitors, we do not charge due diligence fees, filing fees, lockbox fees, application fees, credit checking fees, UCC search fees, or account setup fees. Contact us for a personalized rate quote.</p>,
+    },
+    {
+      q: "Will you check my credit?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">We focus primarily on the creditworthiness of your customers, not your business. We may perform a soft background review on your company, but the approval decision is largely based on who owes you money — not your personal or business credit score.</p>,
+    },
+    {
+      q: "Do you work with startups (new businesses)?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Yes. Any business with accounts receivable from creditworthy commercial or government customers can qualify for factoring — regardless of how long you have been in business. We do not require a lengthy financial history.</p>,
+    },
+    {
+      q: "My company is not in financial trouble; can I still use a factor?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Absolutely. Many of our clients are healthy, growing businesses that use factoring as a strategic tool to accelerate growth, take on larger contracts, or simply improve cash flow without taking on bank debt. Factoring is a mainstream financial tool, not a last resort.</p>,
+    },
+    {
+      q: "How long does it take to begin factoring?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">The onboarding process typically takes 3–7 business days depending on the complexity of your business and how quickly documentation is provided. Once your account is established, ongoing funding is processed within 24–48 hours of invoice submission.</p>,
+    },
+    {
+      q: "Do I need to factor every month?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">No. We offer flexible programs with no monthly minimums. You can factor as much or as little as you need. There is no obligation to submit invoices every month.</p>,
+    },
+    {
+      q: "Do I need to sell all of my accounts receivables?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">No. You choose which invoices to submit for factoring. You can selectively factor only the invoices you need to convert to cash, keeping others to manage on your own.</p>,
+    },
+    {
+      q: "Will my customer know that I'm factoring?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Yes. In a notification factoring arrangement, your customers are notified that their invoice has been assigned to United Capital Funding and that payment should be directed to our lockbox. This is standard practice in the industry and does not affect your customer relationship.</p>,
+    },
+    {
+      q: "What is notification in AR Factoring?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Notification is the process of informing your customer that their invoice has been assigned to United Capital Funding and that payment should be sent directly to our secure lockbox facility. Notification is completed during the onboarding process and any time a new customer is added to your account.</p>,
+    },
+    {
+      q: "What is verification in AR Factoring?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Verification is the process we use to confirm that an invoice is valid before funding. After you submit an invoice for factoring, we contact your customer to confirm that the goods or services have been received and that the invoice is approved for payment. This protects both you and us from fraudulent or disputed invoices.</p>,
+    },
+    {
+      q: "What is a debtor in AR Factoring?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">In accounts receivable factoring, the &ldquo;debtor&rdquo; is your customer — the company or government agency that owes you money on the invoice. United Capital Funding purchases the right to collect that payment from the debtor.</p>,
+    },
+    {
+      q: "Where do the payments go after we begin?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">After notification, your customers are directed to send all payments to United Capital Funding&apos;s secure lockbox. When payment is received, we apply it against your outstanding balance and release any remaining reserve funds (the portion held back at the time of advance) to your account.</p>,
+    },
+    {
+      q: "What happens if I get a check sent to me by mistake?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">If a customer sends payment directly to you after factoring has begun, you are required to forward those funds to United Capital Funding promptly. Your account agreement will outline the specific procedures and timeframes for handling misdirected payments.</p>,
+    },
+    {
+      q: "How do I know if one of my customers has paid?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">Through our online client portal, you have real-time access to all of your account activity including invoice status, payments received from customers, advances made to you, and current reserve balances. You can run reports at any time.</p>,
+    },
+    {
+      q: "What happens if my customer doesn't pay an invoice?",
+      a: <p className="text-sm text-gray-700 leading-relaxed">United Capital Funding offers recourse factoring programs, which means that if your customer does not pay an invoice within a specified period, you may be required to repurchase it or replace it with a new invoice of equal value. We also offer credit insurance options to protect against non-payment losses.</p>,
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
   return (
     <>
-      <PageHero
-        title="Frequently Asked Questions"
-        subtitle="Everything you need to know about invoice factoring and working with UC Funding."
-        breadcrumbs={[
-          { label: "Services", href: "/services" },
-          { label: "FAQs", href: "/services/faqs" },
-        ]}
-      />
-
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-10">
-            {faqs.map((faq) => (
-              <FaqItem key={faq.q} q={faq.q} a={faq.a} />
-            ))}
+      {/* ── PAGE TITLE BANNER ── */}
+      <div style={{ backgroundColor: "#ccd89c" }} className="py-6 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="px-8 py-5" style={{ backgroundColor: "#8aad3a" }}>
+            <h1 className="text-3xl md:text-4xl font-black" style={{ color: "#2d5c27" }}>
+              FAQs
+            </h1>
           </div>
-          <div className="bg-blue-900 text-white rounded-2xl p-8 text-center">
-            <h3 className="text-xl font-bold mb-3">Still have questions?</h3>
-            <p className="text-blue-200 mb-6">Our factoring specialists are happy to answer any questions you have. Contact us today.</p>
-            <div className="flex justify-center gap-4">
-              <Link href="/contact" className="btn-primary">Contact Us</Link>
-              <a href="tel:8778948232" className="btn-outline" style={{ borderColor: "white", color: "white" }}>Call 877-894-8232</a>
-            </div>
+        </div>
+      </div>
+
+      {/* ── MAIN CONTENT ── */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-black mb-2" style={{ color: "#1e1e1e" }}>
+            Frequently Asked Questions (FAQs)
+          </h2>
+          <p className="text-sm text-gray-600 leading-relaxed mb-8">
+            To help our clients and those new to factoring, here are some of the most commonly asked
+            questions and brief answers to get you started.
+          </p>
+
+          {/* Accordion */}
+          <div className="space-y-0">
+            {faqs.map((faq, i) => {
+              const isOpen = openIndex === i;
+              return (
+                <div key={i} className="border border-gray-200 mb-1">
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? -1 : i)}
+                    className="w-full flex items-center justify-between px-4 py-3 text-left bg-white"
+                  >
+                    <span className="text-sm font-semibold pr-4 leading-snug" style={{ color: "#1e1e1e" }}>
+                      {faq.q}
+                    </span>
+                    <span
+                      className="shrink-0 w-8 h-8 flex items-center justify-center text-white font-bold text-lg"
+                      style={{ backgroundColor: "#2d5c27" }}
+                    >
+                      {isOpen ? "∧" : "∨"}
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className="px-4 py-4 border-t border-gray-100 bg-white">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

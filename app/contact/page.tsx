@@ -1,116 +1,311 @@
-import PageHero from "@/components/PageHero";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "Contact Us | United Capital Funding",
   description: "Get in touch with United Capital Funding. Call us toll free at 877-894-8232 or send us a message.",
 };
 
+const locations = [
+  {
+    city: "Headquarters",
+    address: "146 Second Street North, Ste 200\nSt. Petersburg, FL 33701",
+    role: "Main Office",
+    phone: "877-894-8232",
+    email: "info@ucfunding.com",
+    directions: true,
+  },
+  {
+    city: "St. Petersburg, FL",
+    address: "St. Petersburg, FL 33701",
+    name: "Joshua Register",
+    role: "Business Development Officer",
+    email: "josh@ucfunding.com",
+    directions: false,
+  },
+  {
+    city: "Chicago, IL",
+    address: "401 N Michigan Ave, Ste 1200\nChicago, IL 60611",
+    name: "Nancy Kalman",
+    role: "Senior Business Development Officer",
+    email: "nancykalman@ucfunding.com",
+    directions: true,
+  },
+  {
+    city: "Nashville, TN",
+    address: "4525 Harding Pike, Suite 256\nNashville, TN 37205",
+    name: "Matt Perkins",
+    role: "Senior Business Development Officer",
+    email: "matt@ucfunding.com",
+    directions: true,
+  },
+  {
+    city: "Columbus, OH",
+    address: "Columbus, OH",
+    name: "Renee Tyack",
+    role: "Vice President, Sales",
+    email: "renee@ucfunding.com",
+    directions: false,
+  },
+  {
+    city: "Los Angeles, CA",
+    address: "Los Angeles, CA",
+    name: "Neisha Pereira",
+    role: "Vice President, West Region",
+    email: "Neisha@ucfunding.com",
+    directions: false,
+  },
+  {
+    city: "Charleston, SC",
+    address: "Charleston, SC",
+    name: "Nicholas Pittas",
+    role: "National Sales Manager",
+    email: "Nicholas@ucfunding.com",
+    directions: false,
+  },
+];
+
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        title="Contact Us"
-        subtitle="Our factoring specialists are ready to answer your questions. Reach out today."
-        breadcrumbs={[{ label: "Contact Us", href: "/contact" }]}
-      />
+      {/* ── HERO BANNER ── */}
+      <div className="relative w-full overflow-hidden" style={{ height: "220px" }}>
+        <Image
+          src="/hero-right.jpg"
+          alt="Contact Us — United Capital Funding team"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark overlay on left with text */}
+        <div className="absolute inset-0 flex items-end">
+          <div
+            className="px-8 py-5"
+            style={{ background: "rgba(20,40,10,0.72)", minWidth: "220px" }}
+          >
+            <h1
+              className="text-3xl font-black"
+              style={{ color: "#a8c84a" }}
+            >
+              Contact Us
+            </h1>
+          </div>
+        </div>
+      </div>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-14">
-            {/* Contact Info */}
-            <div>
-              <div className="w-14 h-1 bg-yellow-400 mb-6" />
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Get In Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Phone</h3>
-                    <p className="text-gray-600 text-sm">Toll Free</p>
-                    <a href="tel:8778948232" className="text-blue-900 font-bold text-xl hover:text-yellow-600">877-894-8232</a>
-                  </div>
-                </div>
+      {/* ── CONNECT SECTION ── */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black mb-4" style={{ color: "#1e1e1e" }}>
+            Connect with United Capital Funding
+          </h2>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Email</h3>
-                    <p className="text-gray-600 text-sm">We respond within 1 business day</p>
-                    <a href="mailto:info@ucfunding.com" className="text-blue-700 hover:underline">info@ucfunding.com</a>
-                  </div>
-                </div>
+          {/* Fraud notice */}
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "#444" }}>
+            <span
+              className="font-bold"
+              style={{ backgroundColor: "#d4e84a", padding: "0 3px" }}
+            >
+              Did you receive a fax from &ldquo;United Capital&rdquo;?
+            </span>{" "}
+            These communications are <strong>not affiliated</strong> with our company, United Capital Funding.
+            Read more and learn how to report suspected fraud here:{" "}
+            <a
+              href="https://ucfunding.com/unitedcapitalfax/"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://ucfunding.com/unitedcapitalfax/
+            </a>
+          </p>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Service Area</h3>
-                    <p className="text-gray-600 text-sm">Our factoring services are available nationwide across all 50 states.</p>
-                  </div>
-                </div>
+          {/* Form card */}
+          <div className="border border-gray-300 rounded p-6 mb-4">
+            <p className="text-sm text-gray-600 mb-4">
+              Please fill out the form below and a representative will be in touch with you.
+            </p>
+
+            <form className="space-y-3">
+              {/* Row 1: First / Last name */}
+              <div className="grid grid-cols-2 gap-3">
+                <input
+                  type="text"
+                  placeholder="First name"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-green-600"
+                />
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-green-600"
+                />
               </div>
 
-              <div className="mt-10 p-6 bg-blue-50 rounded-xl border border-blue-100">
-                <h3 className="font-bold text-blue-900 mb-2">Referral Program</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Know a business that could benefit from invoice factoring? Refer them to UC Funding and earn a referral fee. Our referral program rewards accountants, brokers, and business advisors who send us qualified leads.
-                </p>
-                <a href="/contact/referral" className="btn-secondary mt-4 inline-block text-xs">Learn About Referrals</a>
-              </div>
-            </div>
+              {/* Row 2: Company */}
+              <input
+                type="text"
+                placeholder="Company name"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-green-600"
+              />
 
-            {/* Contact Form */}
-            <div>
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">First Name *</label>
-                    <input type="text" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" placeholder="John" />
+              {/* Row 3: Email / Phone */}
+              <div className="grid grid-cols-2 gap-3">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-green-600"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-green-600"
+                />
+              </div>
+
+              {/* Row 4: State select / Industry */}
+              <div className="grid grid-cols-2 gap-3">
+                <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-500 focus:outline-none focus:border-green-600">
+                  <option value="">Please select...</option>
+                  <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+                  <option>Arkansas</option><option>California</option><option>Colorado</option>
+                  <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+                  <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+                  <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+                  <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+                  <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+                  <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+                  <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+                  <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+                  <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+                  <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+                  <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+                  <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+                  <option>Texas</option><option>Utah</option><option>Vermont</option>
+                  <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+                  <option>Wisconsin</option><option>Wyoming</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Type of business (industry)?"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-green-600"
+                />
+              </div>
+
+              {/* Row 5: How did you hear */}
+              <div>
+                <label className="text-xs text-gray-500 block mb-1">How did you hear about us? *</label>
+                <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-500 focus:outline-none focus:border-green-600">
+                  <option value="">Please select...</option>
+                  <option>Google / Search Engine</option>
+                  <option>Referral</option>
+                  <option>LinkedIn</option>
+                  <option>Facebook</option>
+                  <option>Trade Show / Conference</option>
+                  <option>Email</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              {/* Legal text */}
+              <p className="text-xs text-gray-500 leading-relaxed">
+                By providing your contact information you are authorizing United Capital Funding, or its
+                affiliates including Gulf Coast Bank &amp; Trust, AmerifactorS, Gulf Coast Business Credit,
+                KLC Financial, Phoenix Capital Group, Seven Oaks Capital Associates, and Spectrum Commercial
+                Services to contact you. Authorization includes the use of text messaging and automated
+                telephone dialing systems in connection with calls made to the number you provide. Please
+                contact us at anytime to change your preferences. Additional data rates may apply.
+              </p>
+              <p className="text-xs text-gray-500 leading-relaxed">
+                By submitting this form, you acknowledge you are over the age of 13 and approve submission
+                of the above information.
+              </p>
+
+              {/* reCAPTCHA placeholder */}
+              <div className="border border-gray-300 rounded p-3 flex items-center gap-4 bg-gray-50" style={{ maxWidth: "300px" }}>
+                <input type="checkbox" id="robot" className="w-5 h-5" />
+                <label htmlFor="robot" className="text-sm text-gray-700 select-none">I&apos;m not a robot</label>
+                <div className="ml-auto text-right">
+                  <div className="text-xs text-gray-400 leading-tight">reCAPTCHA</div>
+                  <div className="text-xs text-gray-400">Privacy - Terms</div>
+                </div>
+              </div>
+              <p className="text-xs text-gray-400">reCAPTCHA helps prevent automated form spam.</p>
+              <p className="text-xs text-gray-400">The submit button will be disabled until you complete the CAPTCHA.</p>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="w-full py-3 font-bold text-white text-sm rounded transition-colors"
+                style={{ backgroundColor: "#555" }}
+              >
+                Connect
+              </button>
+            </form>
+          </div>
+
+          {/* Contact Information link */}
+          <div className="text-center">
+            <a href="#locations" className="text-sm text-gray-500 hover:underline">
+              Contact Information
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OUR LOCATIONS ── */}
+      <section id="locations" className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black mb-8" style={{ color: "#1e1e1e" }}>
+            Our Locations
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {locations.map((loc) => (
+              <div
+                key={loc.city}
+                className="p-5 rounded"
+                style={{ backgroundColor: "#f0f2ec" }}
+              >
+                <h3 className="font-black text-sm mb-2" style={{ color: "#1e1e1e" }}>
+                  {loc.city}
+                </h3>
+                <p className="text-sm text-gray-600 whitespace-pre-line mb-2">{loc.address}</p>
+
+                {loc.name && (
+                  <p className="text-sm font-semibold text-gray-800">{loc.name}</p>
+                )}
+                {loc.role && (
+                  <p className="text-sm text-gray-600 mb-1">{loc.role}</p>
+                )}
+                {loc.phone && (
+                  <p className="text-sm mb-1">
+                    <a href={`tel:${loc.phone.replace(/-/g, "")}`} className="text-gray-700">
+                      {loc.phone}
+                    </a>
+                  </p>
+                )}
+                {loc.email && (
+                  <a
+                    href={`mailto:${loc.email}`}
+                    className="text-sm"
+                    style={{ color: "#2d5c27" }}
+                  >
+                    {loc.email}
+                  </a>
+                )}
+                {loc.directions && (
+                  <div className="mt-2">
+                    <Link
+                      href="#"
+                      className="text-sm font-semibold"
+                      style={{ color: "#2d5c27" }}
+                    >
+                      Get Directions &rsaquo;
+                    </Link>
                   </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">Last Name *</label>
-                    <input type="text" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" placeholder="Smith" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Email Address *</label>
-                  <input type="email" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" placeholder="john@company.com" />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
-                  <input type="tel" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" placeholder="(555) 000-0000" />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Subject *</label>
-                  <select className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
-                    <option>General Inquiry</option>
-                    <option>Factoring Services</option>
-                    <option>Application Status</option>
-                    <option>Referral Program</option>
-                    <option>Client Support</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Message *</label>
-                  <textarea rows={5} className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 resize-none" placeholder="How can we help you?" />
-                </div>
-                <button type="submit" className="w-full py-4 font-bold text-white rounded-lg transition-colors" style={{ backgroundColor: "#1a3a6b" }}>
-                  Send Message
-                </button>
-              </form>
-            </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

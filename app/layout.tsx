@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "United Capital Funding | Invoice Factoring Services",
   description: "UC Funding converts your business or government invoices into working capital quickly. Bank-owned factoring company — lower fees, high quality service nationwide.",
   keywords: "invoice factoring, accounts receivable factoring, working capital, UCFunding, United Capital Funding",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -2,11 +2,13 @@
 
 /* ── Tailwind v4 theme extension ── */
 @theme {
-  --color-primary: #1a3a6b;
-  --color-primary-dark: #122a52;
-  --color-primary-light: #2a5298;
-  --color-accent: #e8b84b;
-  --color-accent-hover: #d4a43a;
+  --color-primary: #2d5c27;
+  --color-primary-dark: #1e3d1a;
+  --color-primary-light: #3d7a35;
+  --color-hero-left: #ccd89c;
+  --color-hero-highlight: #8aad3a;
+  --color-ar-bg: #dde8c0;
+  --color-industries-bg: #f0f2ec;
 }
 
 /* ── Base overrides ── */
@@ -25,7 +27,7 @@ body {
     left: 0;
     background: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    border-top: 3px solid #e8b84b;
+    border-top: 3px solid #2d5c27;
     min-width: 220px;
     z-index: 1000;
   }
@@ -45,66 +47,63 @@ body {
 
   .nav-dropdown a:hover {
     background: #f5f7fa;
-    color: #1a3a6b;
+    color: #2d5c27;
   }
 
   /* Buttons */
   .btn-primary {
-    background: #e8b84b;
-    color: #122a52;
+    background: #2d5c27;
+    color: white;
     font-weight: 700;
-    padding: 12px 28px;
+    padding: 10px 22px;
     border-radius: 4px;
     display: inline-block;
     transition: background 0.2s, transform 0.1s;
     text-decoration: none;
     font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.3px;
     cursor: pointer;
   }
 
   .btn-primary:hover {
-    background: #d4a43a;
+    background: #1e3d1a;
     transform: translateY(-1px);
   }
 
   .btn-secondary {
-    background: #1a3a6b;
+    background: #2d5c27;
     color: white;
     font-weight: 700;
-    padding: 12px 28px;
+    padding: 10px 22px;
     border-radius: 4px;
     display: inline-block;
     transition: background 0.2s;
     text-decoration: none;
     font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.3px;
     cursor: pointer;
   }
 
   .btn-secondary:hover {
-    background: #122a52;
+    background: #1e3d1a;
   }
 
   .btn-outline {
-    border: 2px solid #1a3a6b;
-    color: #1a3a6b;
+    border: 2px solid #2d5c27;
+    color: #2d5c27;
     font-weight: 700;
-    padding: 10px 26px;
+    padding: 8px 20px;
     border-radius: 4px;
     display: inline-block;
     transition: all 0.2s;
     text-decoration: none;
     font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.3px;
     cursor: pointer;
   }
 
   .btn-outline:hover {
-    background: #1a3a6b;
+    background: #2d5c27;
     color: white;
   }
 
@@ -112,22 +111,22 @@ body {
   .section-heading {
     font-size: 2rem;
     font-weight: 700;
-    color: #1a3a6b;
+    color: #2d5c27;
     line-height: 1.3;
   }
 
   .section-subheading {
-    font-size: 1.1rem;
-    color: #6b7280;
+    font-size: 1rem;
+    color: #444;
     margin-top: 12px;
     line-height: 1.7;
   }
 
-  /* Decorative */
-  .gold-bar {
+  /* Decorative bar */
+  .green-bar {
     width: 60px;
     height: 4px;
-    background: #e8b84b;
+    background: #2d5c27;
     margin: 16px 0;
   }
 
@@ -139,5 +138,18 @@ body {
   .card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Green link style */
+  .green-link {
+    color: #2d5c27;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  .green-link:hover {
+    text-decoration: underline;
   }
 }
