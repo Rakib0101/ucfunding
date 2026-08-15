@@ -123,16 +123,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Apply Now bar — right-aligned, below nav */}
-        <div className="hidden lg:flex justify-end max-w-7xl mx-auto px-4 pb-2">
-          <Link
-            href="/application"
-            className="text-white text-sm font-bold px-5 py-1.5 rounded-sm flex items-center gap-1"
-            style={{ backgroundColor: "#2d5c27" }}
-          >
-            Apply Now &rsaquo;
-          </Link>
-        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -171,7 +161,6 @@ export default function Header() {
           ))}
           <div className="p-4 flex flex-col gap-2">
             <a href="#" className="btn-secondary text-center">Client Login</a>
-            <Link href="/application" className="btn-primary text-center">Apply Now</Link>
           </div>
         </div>
       )}

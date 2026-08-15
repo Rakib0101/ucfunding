@@ -107,7 +107,10 @@ export default function IndustriesPage() {
   return (
     <>
       {/* ── PAGE TITLE BANNER ── */}
-      <div style={{ backgroundColor: "#ccd89c" }} className="py-6 px-4">
+      <div style={{ backgroundColor: "#ccd89c" }} className="py-6 px-4 relative">
+        <Link href="/application" className="absolute top-0 right-0 text-white text-sm font-bold px-5 py-3 z-10" style={{ backgroundColor: "#2d5c27" }}>
+          Apply Now ›
+        </Link>
         <div className="max-w-7xl mx-auto">
           <div className="px-8 py-5" style={{ backgroundColor: "#8aad3a" }}>
             <h1 className="text-3xl md:text-4xl font-black" style={{ color: "#2d5c27" }}>

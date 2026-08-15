@@ -31,7 +31,12 @@ export default function PageHero({ title, subtitle, breadcrumbs }: PageHeroProps
           </nav>
         )}
         <div className="w-12 h-1 mb-4" style={{ backgroundColor: "#8aad3a" }} />
-        <h1 className="text-3xl md:text-5xl font-bold">{title}</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl md:text-5xl font-bold">{title}</h1>
+          <Link href="/application" className="text-white text-xs font-bold px-4 py-2 shrink-0" style={{ backgroundColor: "#8aad3a" }}>
+            Apply Now ›
+          </Link>
+        </div>
         {subtitle && <p className="text-green-100 mt-4 text-lg max-w-2xl leading-relaxed">{subtitle}</p>}
       </div>
     </section>

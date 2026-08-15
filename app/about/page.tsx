@@ -20,6 +20,9 @@ export default function AboutPage() {
             priority
           />
           {/* Olive bar with heading overlaid at bottom-left */}
+          <Link href="/application" className="absolute top-0 right-0 text-white text-sm font-bold px-5 py-3 z-10" style={{ backgroundColor: "#2d5c27" }}>
+            Apply Now ›
+          </Link>
           <div className="absolute bottom-0 left-0">
             <div className="px-8 py-4" style={{ backgroundColor: "#8aad3a" }}>
               <h1 className="text-3xl md:text-4xl font-black" style={{ color: "#2d5c27" }}>

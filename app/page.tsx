@@ -118,7 +118,10 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           1. HERO — two columns
       ═══════════════════════════════════════════ */}
-      <section className="flex flex-col md:flex-row" style={{ minHeight: "420px" }}>
+      <section className="relative flex flex-col md:flex-row" style={{ minHeight: "420px" }}>
+        <Link href="/application" className="absolute top-0 right-0 z-10 text-white text-sm font-bold px-5 py-3" style={{ backgroundColor: "#2d5c27" }}>
+          Apply Now ›
+        </Link>
         {/* LEFT — sage green background with stacked highlight lines */}
         <div
           className="flex-1 flex flex-col justify-center px-10 py-12"

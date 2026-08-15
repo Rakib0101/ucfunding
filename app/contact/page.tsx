@@ -78,15 +78,12 @@ export default function ContactPage() {
           priority
         />
         {/* Dark overlay on left with text */}
+        <Link href="/application" className="absolute top-0 right-0 text-white text-sm font-bold px-5 py-3 z-10" style={{ backgroundColor: "#2d5c27" }}>
+          Apply Now ›
+        </Link>
         <div className="absolute inset-0 flex items-end">
-          <div
-            className="px-8 py-5"
-            style={{ background: "rgba(20,40,10,0.72)", minWidth: "220px" }}
-          >
-            <h1
-              className="text-3xl font-black"
-              style={{ color: "#a8c84a" }}
-            >
+          <div className="px-8 py-5" style={{ background: "rgba(20,40,10,0.72)", minWidth: "220px" }}>
+            <h1 className="text-3xl font-black" style={{ color: "#a8c84a" }}>
               Contact Us
             </h1>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function SocialResponsibilityPage() {
@@ -85,11 +86,11 @@ export default function SocialResponsibilityPage() {
           className="object-cover object-center"
           priority
         />
+        <Link href="/application" className="absolute top-0 right-0 text-white text-sm font-bold px-5 py-3 z-10" style={{ backgroundColor: "#2d5c27" }}>
+          Apply Now ›
+        </Link>
         <div className="absolute inset-0 flex items-end">
-          <div
-            className="px-8 py-5"
-            style={{ background: "rgba(20,40,10,0.72)", minWidth: "260px" }}
-          >
+          <div className="px-8 py-5" style={{ background: "rgba(20,40,10,0.72)", minWidth: "260px" }}>
             <h1 className="text-3xl font-black leading-tight" style={{ color: "#a8c84a" }}>
               Social<br />Responsibility
             </h1>
