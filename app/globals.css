@@ -6,6 +6,10 @@
   --color-warm-bg: #f8f6f2;
 }
 
+@utility container {
+  max-width: 1280px;
+}
+
 body {
   font-family: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
   color: #1a1a1a;

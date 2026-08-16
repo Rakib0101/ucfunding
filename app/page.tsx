@@ -19,8 +19,9 @@ const threeIcons = [
 				/>
 			</svg>
 		),
+		title: "Powerful Results",
 		label:
-			"Trusted partnership built on transparency and long-term relationships.",
+			"Leveraging our knowledge of capital markets, we help every client achieve their goals.",
 	},
 	{
 		icon: (
@@ -38,7 +39,9 @@ const threeIcons = [
 				/>
 			</svg>
 		),
-		label: "Flexible capital solutions that grow alongside your business.",
+		title: "Industry Expertise",
+		label:
+			"We have decades of experience in funding equipment leasing and working capital loans.",
 	},
 	{
 		icon: (
@@ -56,7 +59,9 @@ const threeIcons = [
 				/>
 			</svg>
 		),
-		label: "Expert team with decades of commercial finance experience.",
+		title: "Innovative Solutions",
+		label:
+			"Our unique credit and underwriting model can fulfill the capital needs of your businesses.",
 	},
 ];
 
@@ -65,9 +70,9 @@ export default function Home() {
 		<>
 			{/* ── HERO ── */}
 			<section
-				className="relative flex items-center justify-center text-center text-white"
+				className="relative flex items-center justify-center overflow-hidden text-center text-white"
 				style={{
-					minHeight: "520px",
+					minHeight: "700px",
 					backgroundImage: "url('/hero-bg.jpg')",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
@@ -75,27 +80,68 @@ export default function Home() {
 			>
 				<div
 					className="absolute inset-0"
-					style={{ background: "rgba(0,0,0,0.3)" }}
+					style={{ background: "rgba(33, 49, 57, 0.32)" }}
 				/>
-				<div className="relative z-10 px-6">
+				<div className="relative z-10 max-w-5xl px-6 py-12">
+					<p
+						style={{
+							fontFamily: "'Inter',sans-serif",
+							fontSize: "0.7rem",
+							fontWeight: 500,
+							letterSpacing: "0.32em",
+							textTransform: "uppercase",
+							color: "rgba(255,255,255,0.9)",
+							marginBottom: "2rem",
+						}}
+					>
+						venture debt & capital solutions
+					</p>
 					<h1
 						style={{
 							fontFamily: "'Cormorant Garamond',Georgia,serif",
-							fontSize: "clamp(3rem,7vw,5.5rem)",
+							fontSize: "clamp(4rem,8vw,10rem)",
 							fontWeight: 300,
-							lineHeight: 1.1,
+							lineHeight: 0.9,
+							letterSpacing: "-0.04em",
 							color: "#fff",
+							fontStyle: "normal",
 						}}
 					>
-						Capital <em>for</em> Growth
+						Capital{" "}
+						<em style={{ fontStyle: "normal", fontWeight: 300 }}>for</em> Growth
 					</h1>
+					<p
+						style={{
+							fontFamily: "'Inter',sans-serif",
+							fontSize: "clamp(0.9rem,1.6vw,1.3rem)",
+							fontWeight: 300,
+							lineHeight: 1.6,
+							color: "rgba(255,255,255,0.9)",
+							maxWidth: "820px",
+							margin: "2rem auto 0",
+						}}
+					>
+						United Capital Partners is a leader in capital facilities,
+						structured finance solutions, asset-based equipment lending, venture
+						leasing, and small to mid-ticket leasing solutions.
+					</p>
+					<div className="mt-10">
+						<Link
+							href="/about"
+							className="inline-flex items-center justify-center rounded-full border border-white bg-transparent px-10 py-3 text-[0.75rem] font-medium tracking-[0.22em] text-white uppercase transition hover:bg-white hover:text-slate-900"
+						>
+							Learn More
+						</Link>
+					</div>
 				</div>
 			</section>
 
 			{/* ── LEADING THE WAY ── */}
 			<section className="bg-white py-20 text-center px-6">
 				<div className="max-w-2xl mx-auto">
-					<p className="label-eyebrow mb-4">Who we are</p>
+					<p className="label-eyebrow mb-4">
+						Venture & Structured Credit Leasing
+					</p>
 					<h2
 						style={{
 							fontFamily: "'Cormorant Garamond',Georgia,serif",
@@ -107,24 +153,23 @@ export default function Home() {
 					>
 						Leading the way in commercial financial services.
 					</h2>
-					<p
-						style={{
-							fontFamily: "'Inter',sans-serif",
-							fontSize: "0.85rem",
-							color: "#666",
-							lineHeight: 1.9,
-							marginTop: "16px",
-						}}
-					>
-						United Capital Partners LLC delivers bespoke financing solutions to
-						small businesses and middle-market companies, empowering growth
-						through strategic capital access.
-					</p>
 				</div>
 				<div className="max-w-4xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-					{threeIcons.map(({ icon, label }, i) => (
+					{threeIcons.map(({ icon, title, label }, i) => (
 						<div key={i} className="flex flex-col items-center gap-4">
-							<div style={{ color: "#c9a96e" }}>{icon}</div>
+							<div style={{ color: "#111" }}>{icon}</div>
+							<p
+								style={{
+									fontFamily: "'Inter',sans-serif",
+									fontSize: "0.72rem",
+									fontWeight: 600,
+									letterSpacing: "0.18em",
+									textTransform: "uppercase",
+									color: "#111",
+								}}
+							>
+								{title}
+							</p>
 							<p
 								style={{
 									fontFamily: "'Inter',sans-serif",
@@ -142,7 +187,7 @@ export default function Home() {
 
 			{/* ── FLEXIBLE AND INNOVATIVE ── */}
 			<section
-				className="grid grid-cols-1 md:grid-cols-2"
+				className="grid grid-cols-1 md:grid-cols-2 bg-[#F9F9F9]"
 				style={{ minHeight: "480px" }}
 			>
 				<Image
@@ -152,8 +197,7 @@ export default function Home() {
 					height={480}
 					className="object-cover w-full h-full"
 				/>
-				<div className="bg-white flex flex-col justify-center px-12 py-16">
-					<p className="label-eyebrow mb-5">Our approach</p>
+				<div className="flex flex-col justify-center px-12 py-16">
 					<h2
 						style={{
 							fontFamily: "'Cormorant Garamond',Georgia,serif",
@@ -181,16 +225,16 @@ export default function Home() {
 						creative solutions that competitors can't match.
 					</p>
 					<Link href="/about" className="btn-outline-dark self-start">
-						Learn More
+						What we offer
 					</Link>
 				</div>
 			</section>
 
 			{/* ── PARTNERSHIPS / TAILORED ── */}
 			<section className="bg-white py-20">
-				<div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16">
+				<div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 md:divide-x md:divide-gray-200">
 					<div>
-						<p className="label-eyebrow mb-5">Philosophy</p>
+						<p className="label-eyebrow mb-5">Our Focus</p>
 						<h2
 							style={{
 								fontFamily: "'Cormorant Garamond',Georgia,serif",
@@ -209,15 +253,20 @@ export default function Home() {
 								fontSize: "0.85rem",
 								color: "#666",
 								lineHeight: 1.9,
+								marginBottom: "28px",
 							}}
 						>
-							We invest in understanding your business deeply so that every
-							capital solution we provide strengthens your operations and
-							accelerates your long-term trajectory.
+							Whether your business needs a lease line of credit to support
+							capital equipment acquisitions, working capital to support
+							continued growth, senior debt or mezzanine debt, our team will
+							help you navigate the decision with confidence.
 						</p>
+						<Link href="/about" className="btn-dark rounded-full px-8 py-4">
+							Learn More
+						</Link>
 					</div>
-					<div>
-						<p className="label-eyebrow mb-5">What we offer</p>
+					<div className="md:pl-16">
+						<p className="label-eyebrow mb-5">What We Offer</p>
 						<h2
 							style={{
 								fontFamily: "'Cormorant Garamond',Georgia,serif",
@@ -234,7 +283,7 @@ export default function Home() {
 							style={{
 								fontFamily: "'Inter',sans-serif",
 								fontSize: "0.82rem",
-								color: "#666",
+								color: "#333",
 								lineHeight: 2,
 								listStyle: "none",
 								padding: 0,
@@ -242,14 +291,14 @@ export default function Home() {
 						>
 							{[
 								"Equipment Leasing & Financing",
-								"Asset Based Lending & Factoring",
-								"Purchase Order & Contract Finance",
 								"Venture Debt",
+								"Asset-Based Lending & Factoring",
 								"Subordinated Debt",
-								"Short-Term Bridge Loans",
+								"Short-Term Bridge Loan",
+								"Purchase Order and Contract Finance",
 							].map((item) => (
 								<li key={item} className="flex items-center gap-2">
-									<span style={{ color: "#c9a96e" }}>—</span> {item}
+									<span style={{ color: "#111" }}>✓</span> {item}
 								</li>
 							))}
 						</ul>
@@ -259,10 +308,10 @@ export default function Home() {
 
 			{/* ── GET THE DETAILS ── */}
 			<section
-				className="grid grid-cols-1 md:grid-cols-2"
+				className="grid grid-cols-1 md:grid-cols-2 bg-[#F9F9F9]"
 				style={{ minHeight: "440px" }}
 			>
-				<div className="bg-white flex flex-col justify-center px-12 py-16">
+				<div className="flex flex-col justify-center px-12 py-16">
 					<p className="label-eyebrow mb-5">Learn more</p>
 					<h2
 						style={{
@@ -304,14 +353,15 @@ export default function Home() {
 
 			{/* ── CONTACT FORM SECTION ── */}
 			<section
-				className="grid grid-cols-1 md:grid-cols-2"
+				className="grid grid-cols-1 md:grid-cols-2 container mx-auto py-12 "
 				style={{ minHeight: "480px" }}
 			>
-				<div
-					style={{
-						background: "linear-gradient(135deg,#1e2d42 0%,#2c3f5a 100%)",
-						minHeight: "320px",
-					}}
+				<Image
+					src={"/cta-left.webp"}
+					alt="Office space"
+					width={300}
+					height={480}
+					className="object-cover w-130  h-full"
 				/>
 				<div className="bg-white flex flex-col justify-center px-12 py-16">
 					<p className="label-eyebrow mb-4">Send us a message</p>

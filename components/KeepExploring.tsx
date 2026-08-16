@@ -20,8 +20,8 @@ export default function KeepExploring({
   return (
     <section style={{ backgroundColor: "#f8f6f2" }} className="py-20">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          <div className="pr-0 md:pr-16 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-0">
+          <div className="pb-10 md:pb-0 md:pr-16 py-4">
             <p className="label-eyebrow mb-4">Get the details</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: "clamp(2rem,4vw,2.8rem)", fontWeight: 400, color: "#111", marginBottom: "16px" }}>
               {leftTitle}
@@ -29,19 +29,28 @@ export default function KeepExploring({
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
               {leftText}
             </p>
-            <Link href={leftHref} className="btn-outline-dark">
+            <Link href={leftHref} className="btn-outline-dark rounded-full">
               Learn More
             </Link>
           </div>
 
-          <div
-            className="hidden md:flex items-center justify-center"
-            style={{ fontSize: "0.75rem", letterSpacing: "0.1em", color: "#ccc" }}
-          >
-            or
+          <div className="hidden md:flex flex-col items-center self-stretch px-10">
+            <span className="w-px flex-1 bg-gray-300" />
+            <span
+              style={{
+                fontFamily: "'Cormorant Garamond',Georgia,serif",
+                fontStyle: "italic",
+                fontSize: "1.15rem",
+                color: "#111",
+              }}
+              className="py-4"
+            >
+              or
+            </span>
+            <span className="w-px flex-1 bg-gray-300" />
           </div>
 
-          <div className="pl-0 md:pl-16 py-4 border-t md:border-t-0 md:border-l border-gray-200 mt-8 md:mt-0 pt-8 md:pt-4">
+          <div className="pt-10 md:pt-0 md:pl-16 py-4">
             <p className="label-eyebrow mb-4">Get in touch</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: "clamp(2rem,4vw,2.8rem)", fontWeight: 400, color: "#111", marginBottom: "16px" }}>
               {rightTitle}
@@ -49,7 +58,7 @@ export default function KeepExploring({
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
               {rightText}
             </p>
-            <Link href={rightHref} className="btn-outline-dark">
+            <Link href={rightHref} className="btn-outline-dark rounded-full">
               Contact Us
             </Link>
           </div>
