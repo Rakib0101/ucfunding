@@ -1,43 +1,55 @@
-import Link from "next/link";
-
-interface Breadcrumb {
-  label: string;
-  href: string;
-}
-
 interface PageHeroProps {
+  eyebrow?: string;
   title: string;
+  italicWord?: string;
   subtitle?: string;
-  breadcrumbs?: Breadcrumb[];
+  ctaText?: string;
+  ctaHref?: string;
 }
 
-export default function PageHero({ title, subtitle, breadcrumbs }: PageHeroProps) {
+export default function PageHero({ eyebrow, title, italicWord, subtitle, ctaText, ctaHref }: PageHeroProps) {
+  const renderTitle = () => {
+    if (!italicWord) return title;
+    const parts = title.split(italicWord);
+    return (
+      <>
+        {parts[0]}
+        <em>{italicWord}</em>
+        {parts[1]}
+      </>
+    );
+  };
+
   return (
-    <section style={{ backgroundColor: "#2d5c27" }} className="py-14 text-white">
-      <div className="max-w-7xl mx-auto px-4">
-        {breadcrumbs && (
-          <nav className="flex items-center gap-2 text-green-300 text-sm mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            {breadcrumbs.map((crumb, i) => (
-              <span key={i} className="flex items-center gap-2">
-                <span>/</span>
-                {i === breadcrumbs.length - 1 ? (
-                  <span className="text-white">{crumb.label}</span>
-                ) : (
-                  <Link href={crumb.href} className="hover:text-white transition-colors">{crumb.label}</Link>
-                )}
-              </span>
-            ))}
-          </nav>
+    <section
+      className="relative flex items-center justify-center text-center text-white"
+      style={{
+        minHeight: "420px",
+        background: "linear-gradient(160deg, #1c2840 0%, #0f1628 60%, #090e1a 100%)",
+      }}
+    >
+      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.25)" }} />
+      <div className="relative z-10 max-w-3xl mx-auto px-6 py-20">
+        {eyebrow && (
+          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "20px" }}>
+            {eyebrow}
+          </p>
         )}
-        <div className="w-12 h-1 mb-4" style={{ backgroundColor: "#8aad3a" }} />
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl md:text-5xl font-bold">{title}</h1>
-          <Link href="/application" className="text-white text-xs font-bold px-4 py-2 shrink-0" style={{ backgroundColor: "#8aad3a" }}>
-            Apply Now ›
-          </Link>
-        </div>
-        {subtitle && <p className="text-green-100 mt-4 text-lg max-w-2xl leading-relaxed">{subtitle}</p>}
+        <h1 style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: "clamp(2.8rem,6vw,4.5rem)", fontWeight: 300, lineHeight: 1.15, color: "#fff" }}>
+          {renderTitle()}
+        </h1>
+        {subtitle && (
+          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.8, marginTop: "20px", maxWidth: "480px", margin: "20px auto 0" }}>
+            {subtitle}
+          </p>
+        )}
+        {ctaText && ctaHref && (
+          <div style={{ marginTop: "28px" }}>
+            <a href={ctaHref} className="btn-outline-white">
+              {ctaText}
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

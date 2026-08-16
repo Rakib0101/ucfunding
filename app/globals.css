@@ -1,155 +1,100 @@
 @import "tailwindcss";
 
-/* ── Tailwind v4 theme extension ── */
 @theme {
-  --color-primary: #2d5c27;
-  --color-primary-dark: #1e3d1a;
-  --color-primary-light: #3d7a35;
-  --color-hero-left: #ccd89c;
-  --color-hero-highlight: #8aad3a;
-  --color-ar-bg: #dde8c0;
-  --color-industries-bg: #f0f2ec;
+  --color-gold: #c9a96e;
+  --color-dark: #111111;
+  --color-warm-bg: #f8f6f2;
 }
 
-/* ── Base overrides ── */
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #1a1a1a;
   line-height: 1.6;
 }
 
-/* ── Component classes (must be in @layer to respect Tailwind specificity) ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  line-height: 1.2;
+}
+
 @layer components {
-  /* Nav dropdown */
-  .nav-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    border-top: 3px solid #2d5c27;
-    min-width: 220px;
-    z-index: 1000;
+  .btn-dark {
+    background: #111111;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-dark:hover {
+    background: #333333;
   }
 
-  .nav-item:hover .nav-dropdown {
-    display: block;
-  }
-
-  .nav-dropdown a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    font-size: 14px;
-    border-bottom: 1px solid #f0f0f0;
+  .btn-outline-dark {
+    border: 1px solid #111111;
+    color: #111111;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 11px 24px;
+    display: inline-block;
+    text-decoration: none;
     transition: background 0.2s, color 0.2s;
   }
-
-  .nav-dropdown a:hover {
-    background: #f5f7fa;
-    color: #2d5c27;
+  .btn-outline-dark:hover {
+    background: #111111;
+    color: #ffffff;
   }
 
-  /* Buttons */
-  .btn-primary {
-    background: #2d5c27;
-    color: white;
-    font-weight: 700;
-    padding: 10px 22px;
-    border-radius: 4px;
+  .btn-outline-white {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 11px 24px;
     display: inline-block;
-    transition: background 0.2s, transform 0.1s;
     text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline-white:hover {
+    background: #ffffff;
+    color: #111111;
   }
 
-  .btn-primary:hover {
-    background: #1e3d1a;
-    transform: translateY(-1px);
+  .label-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #999999;
   }
 
-  .btn-secondary {
-    background: #2d5c27;
-    color: white;
-    font-weight: 700;
-    padding: 10px 22px;
-    border-radius: 4px;
-    display: inline-block;
-    transition: background 0.2s;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    cursor: pointer;
+  .form-field {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    background: transparent;
+    outline: none;
   }
-
-  .btn-secondary:hover {
-    background: #1e3d1a;
+  .form-field::placeholder {
+    color: #aaaaaa;
   }
-
-  .btn-outline {
-    border: 2px solid #2d5c27;
-    color: #2d5c27;
-    font-weight: 700;
-    padding: 8px 20px;
-    border-radius: 4px;
-    display: inline-block;
-    transition: all 0.2s;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    cursor: pointer;
-  }
-
-  .btn-outline:hover {
-    background: #2d5c27;
-    color: white;
-  }
-
-  /* Typography helpers */
-  .section-heading {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2d5c27;
-    line-height: 1.3;
-  }
-
-  .section-subheading {
-    font-size: 1rem;
-    color: #444;
-    margin-top: 12px;
-    line-height: 1.7;
-  }
-
-  /* Decorative bar */
-  .green-bar {
-    width: 60px;
-    height: 4px;
-    background: #2d5c27;
-    margin: 16px 0;
-  }
-
-  /* Card hover effect */
-  .card-hover {
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-  }
-
-  /* Green link style */
-  .green-link {
-    color: #2d5c27;
-    font-weight: 600;
-    font-size: 13px;
-    text-decoration: none;
-    letter-spacing: 0.3px;
-  }
-
-  .green-link:hover {
-    text-decoration: underline;
+  .form-field:focus {
+    border-bottom-color: #111111;
   }
 }
