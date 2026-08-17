@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
 	title: "Contact Us | United Capital Partners",
 	description:
-		"Get in touch with United Capital Partners. Located in the heart of Houston, TX.",
+		"Get in touch with United Capital Partners. Located in the heart of Miami, FL.",
 };
 
 const faqs = [
@@ -230,7 +230,9 @@ export default function ContactPage() {
 										Address
 									</p>
 									<a
-										href="tel:+1-713-999-9999"
+										href="https://maps.google.com/?q=100+NW+6th+St+Suite+2602+Miami+FL+33136"
+										target="_blank"
+										rel="noopener noreferrer"
 										style={{
 											fontFamily: "'Barlow',sans-serif",
 											fontSize: "0.85rem",
@@ -299,7 +301,7 @@ export default function ContactPage() {
 				</div>
 			</section>
 
-			{/* ── LOCATED IN HOUSTON ── */}
+			{/* ── LOCATED IN MIAMI ── */}
 			<section
 				className="grid grid-cols-1 md:grid-cols-2"
 				style={{ minHeight: "440px" }}
@@ -323,7 +325,7 @@ export default function ContactPage() {
 						}}
 						className="text-center md:text-left max-w-sm"
 					>
-						Located in the heart of Houston.
+						Located in the heart of Miami.
 					</h2>
 					<p
 						style={{
@@ -335,7 +337,7 @@ export default function ContactPage() {
 							marginBottom: "28px",
 						}}
 					>
-						We are located in the heart of Houston's Central Business District.
+						We are located in the heart of Miami's Central Business District.
 					</p>
 					<a
 						href="https://maps.google.com"
