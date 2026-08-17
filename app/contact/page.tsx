@@ -178,7 +178,7 @@ export default function ContactPage() {
 										Phone
 									</p>
 									<a
-										href="tel:+1-713-999-9999"
+										href="tel:+1 (561) 571-7271"
 										style={{
 											fontFamily: "'Barlow',sans-serif",
 											fontSize: "0.85rem",
@@ -188,7 +188,7 @@ export default function ContactPage() {
 										}}
 										className="hover:text-black tracking-wider transition-colors"
 									>
-										+1 (713) 907-0372
+										+1 (561) 571-7271
 									</a>
 								</div>
 							</div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
 										email
 									</p>
 									<a
-										href="tel:+1-713-999-9999"
+										href="mailto:murray@ucapitalfl.com"
 										style={{
 											fontFamily: "'Barlow',sans-serif",
 											fontSize: "0.85rem",
@@ -214,7 +214,7 @@ export default function ContactPage() {
 										}}
 										className="hover:text-black tracking-wider transition-colors"
 									>
-										admin@unitedcapllc.com
+										murray@ucapitalfl.com
 									</a>
 								</div>
 							</div>
@@ -240,7 +240,7 @@ export default function ContactPage() {
 										}}
 										className="hover:text-black tracking-wider transition-colors"
 									>
-										708 Main Street 10th Floor Houston, TX 77002
+										100 NW 6th St. 2602 Miami, Fl 33136 United States
 									</a>
 								</div>
 							</div>
@@ -256,7 +256,7 @@ export default function ContactPage() {
 										Business Hours
 									</p>
 									<a
-										href="tel:+1-713-999-9999"
+										href="tel:+1-561-571-7271"
 										style={{
 											fontFamily: "'Barlow',sans-serif",
 											fontSize: "0.85rem",

@@ -86,11 +86,7 @@ export default function Footer() {
 							Address
 						</p>
 						<address className="not-italic text-gray-50">
-							708 Main St, 10th Floor
-							<br />
-							Houston, TX 77002
-							<br />
-							United States
+							100 NW 6th St. <br /> 2602 Miami, Fl 33136 <br /> United States
 						</address>
 					</div>
 				</div>
