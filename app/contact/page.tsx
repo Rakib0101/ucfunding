@@ -130,7 +130,7 @@ export default function ContactPage() {
 				<div className="relative z-10 max-w-3xl mx-auto px-6 py-20">
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.6rem",
 							letterSpacing: "0.18em",
 							textTransform: "uppercase",
@@ -153,7 +153,7 @@ export default function ContactPage() {
 					</h1>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.85rem",
 							color: "rgba(255,255,255,0.65)",
 							lineHeight: 1.8,
@@ -192,7 +192,7 @@ export default function ContactPage() {
 						</h2>
 						<p
 							style={{
-								fontFamily: "'Inter',sans-serif",
+								fontFamily: "'Barlow',sans-serif",
 								fontSize: "0.82rem",
 								color: "#777",
 								lineHeight: 1.8,
@@ -273,7 +273,7 @@ export default function ContactPage() {
 									<div>
 										<p
 											style={{
-												fontFamily: "'Inter',sans-serif",
+												fontFamily: "'Barlow',sans-serif",
 												fontSize: "0.65rem",
 												letterSpacing: "0.12em",
 												textTransform: "uppercase",
@@ -287,7 +287,7 @@ export default function ContactPage() {
 											<a
 												href={href}
 												style={{
-													fontFamily: "'Inter',sans-serif",
+													fontFamily: "'Barlow',sans-serif",
 													fontSize: "0.85rem",
 													color: "#333",
 													textDecoration: "none",
@@ -300,7 +300,7 @@ export default function ContactPage() {
 										) : (
 											<p
 												style={{
-													fontFamily: "'Inter',sans-serif",
+													fontFamily: "'Barlow',sans-serif",
 													fontSize: "0.85rem",
 													color: "#333",
 													whiteSpace: "pre-line",
@@ -352,7 +352,7 @@ export default function ContactPage() {
 								</h3>
 								<p
 									style={{
-										fontFamily: "'Inter',sans-serif",
+										fontFamily: "'Barlow',sans-serif",
 										fontSize: "0.82rem",
 										color: "#666",
 										lineHeight: 1.9,
@@ -394,7 +394,7 @@ export default function ContactPage() {
 					</h2>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.85rem",
 							color: "#666",
 							lineHeight: 1.9,
@@ -434,7 +434,7 @@ export default function ContactPage() {
 						</h2>
 						<p
 							style={{
-								fontFamily: "'Inter',sans-serif",
+								fontFamily: "'Barlow',sans-serif",
 								fontSize: "0.82rem",
 								color: "#666",
 								lineHeight: 1.8,
@@ -463,7 +463,7 @@ export default function ContactPage() {
 						</h2>
 						<p
 							style={{
-								fontFamily: "'Inter',sans-serif",
+								fontFamily: "'Barlow',sans-serif",
 								fontSize: "0.82rem",
 								color: "#666",
 								lineHeight: 1.8,

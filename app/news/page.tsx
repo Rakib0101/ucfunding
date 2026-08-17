@@ -48,7 +48,7 @@ export default function NewsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
             {news.map(({ title, date, excerpt, slug }) => (
               <article key={title} style={{ borderTop: "1px solid #e8e4dc", paddingTop: "20px" }}>
-                <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", marginBottom: "10px" }}>
+                <p style={{ fontFamily: "'Barlow',sans-serif", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa", marginBottom: "10px" }}>
                   {date}
                 </p>
                 <h2 style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: "1.1rem", fontWeight: 500, color: "#111", lineHeight: 1.35, marginBottom: "10px" }}>
@@ -56,7 +56,7 @@ export default function NewsPage() {
                     {title}
                   </Link>
                 </h2>
-                <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.78rem", color: "#888", lineHeight: 1.8 }}>
+                <p style={{ fontFamily: "'Barlow',sans-serif", fontSize: "0.78rem", color: "#888", lineHeight: 1.8 }}>
                   {excerpt}
                 </p>
               </article>
@@ -70,7 +70,7 @@ export default function NewsPage() {
                 key={p}
                 href="#"
                 style={{
-                  fontFamily: "'Inter',sans-serif",
+                  fontFamily: "'Barlow',sans-serif",
                   fontSize: "0.75rem",
                   width: "32px",
                   height: "32px",

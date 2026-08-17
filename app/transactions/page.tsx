@@ -82,7 +82,7 @@ export default function TransactionsPage() {
 				<div className="relative z-10 max-w-3xl mx-auto px-6 py-20">
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.6rem",
 							letterSpacing: "0.18em",
 							textTransform: "uppercase",
@@ -105,7 +105,7 @@ export default function TransactionsPage() {
 					</h1>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.85rem",
 							color: "rgba(255,255,255,0.65)",
 							lineHeight: 1.8,
@@ -150,7 +150,7 @@ export default function TransactionsPage() {
 								</h3>
 								<ul
 									style={{
-										fontFamily: "'Inter',sans-serif",
+										fontFamily: "'Barlow',sans-serif",
 										fontSize: "0.78rem",
 										color: "#666",
 										lineHeight: 2,
@@ -200,7 +200,7 @@ export default function TransactionsPage() {
 					</h2>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.85rem",
 							color: "#666",
 							lineHeight: 1.9,

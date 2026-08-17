@@ -85,7 +85,7 @@ export default function Home() {
 				<div className="relative z-10 max-w-5xl px-6 py-12">
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.7rem",
 							fontWeight: 500,
 							letterSpacing: "0.32em",
@@ -112,7 +112,7 @@ export default function Home() {
 					</h1>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "clamp(0.9rem,1.6vw,1.3rem)",
 							fontWeight: 300,
 							lineHeight: 1.6,
@@ -160,7 +160,7 @@ export default function Home() {
 							<div style={{ color: "#111" }}>{icon}</div>
 							<p
 								style={{
-									fontFamily: "'Inter',sans-serif",
+									fontFamily: "'Barlow',sans-serif",
 									fontSize: "0.72rem",
 									fontWeight: 600,
 									letterSpacing: "0.18em",
@@ -172,7 +172,7 @@ export default function Home() {
 							</p>
 							<p
 								style={{
-									fontFamily: "'Inter',sans-serif",
+									fontFamily: "'Barlow',sans-serif",
 									fontSize: "0.8rem",
 									color: "#666",
 									lineHeight: 1.8,
@@ -212,7 +212,7 @@ export default function Home() {
 					</h2>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.85rem",
 							color: "#666",
 							lineHeight: 1.9,
@@ -249,7 +249,7 @@ export default function Home() {
 						</h2>
 						<p
 							style={{
-								fontFamily: "'Inter',sans-serif",
+								fontFamily: "'Barlow',sans-serif",
 								fontSize: "0.85rem",
 								color: "#666",
 								lineHeight: 1.9,
@@ -281,7 +281,7 @@ export default function Home() {
 						</h2>
 						<ul
 							style={{
-								fontFamily: "'Inter',sans-serif",
+								fontFamily: "'Barlow',sans-serif",
 								fontSize: "0.82rem",
 								color: "#333",
 								lineHeight: 2,
@@ -327,7 +327,7 @@ export default function Home() {
 					</h2>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.85rem",
 							color: "#666",
 							lineHeight: 1.9,

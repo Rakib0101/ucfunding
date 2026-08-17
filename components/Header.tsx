@@ -15,26 +15,74 @@ export default function Header() {
 					/>
 				</Link>
 
-				<nav className="hidden md:flex items-center gap-8">
-					{[
-						{
-							label: "About",
-							href: "/about",
-							children: [
-								{ label: "About UCP", href: "/about" },
-								{ label: "Our Mission", href: "/mission" },
-							],
-						},
-						{ label: "Products", href: "/products" },
-						{ label: "Transactions", href: "/transactions" },
-						{ label: "News", href: "/news" },
-					].map(({ label, href, children }) =>
-						children ? (
-							<div key={href} className="group relative">
+				<div className="flex items-center gap-6">
+					<nav className="hidden md:flex items-center gap-8">
+						{[
+							{
+								label: "About",
+								href: "/about",
+								children: [
+									{ label: "About UCP", href: "/about" },
+									{ label: "Our Mission", href: "/mission" },
+								],
+							},
+							{ label: "Products", href: "/products" },
+							{ label: "Transactions", href: "/transactions" },
+							{ label: "News", href: "/news" },
+						].map(({ label, href, children }) =>
+							children ? (
+								<div key={href} className="group relative">
+									<Link
+										href={href}
+										style={{
+											fontFamily: "'Barlow',sans-serif",
+											fontSize: "0.65rem",
+											letterSpacing: "0.14em",
+											textTransform: "uppercase",
+											fontWeight: 500,
+											color: "#555",
+											textDecoration: "none",
+										}}
+										className="hover:text-black transition-colors"
+									>
+										{label}
+									</Link>
+									<div className="invisible absolute top-full left-1/2 z-50 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
+										<div
+											className="absolute left-1/2 top-1.5 h-2 w-2 -translate-x-1/2 rotate-45"
+											style={{ background: "#f8f6f2" }}
+										/>
+										<div
+											className="relative min-w-42.5 py-4 px-6 text-center shadow-lg"
+											style={{ background: "#f8f6f2" }}
+										>
+											{children.map((child) => (
+												<Link
+													key={child.href}
+													href={child.href}
+													style={{
+														fontFamily: "'Barlow',sans-serif",
+														fontSize: "0.62rem",
+														letterSpacing: "0.12em",
+														textTransform: "uppercase",
+														fontWeight: 500,
+														color: "#777",
+														textDecoration: "none",
+													}}
+													className="block py-1.5 whitespace-nowrap hover:text-black transition-colors"
+												>
+													{child.label}
+												</Link>
+											))}
+										</div>
+									</div>
+								</div>
+							) : (
 								<Link
+									key={href}
 									href={href}
 									style={{
-										fontFamily: "'Inter',sans-serif",
+										fontFamily: "'Barlow',sans-serif",
 										fontSize: "0.65rem",
 										letterSpacing: "0.14em",
 										textTransform: "uppercase",
@@ -46,60 +94,14 @@ export default function Header() {
 								>
 									{label}
 								</Link>
-								<div className="invisible absolute top-full left-1/2 z-50 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
-									<div
-										className="absolute left-1/2 top-1.5 h-2 w-2 -translate-x-1/2 rotate-45"
-										style={{ background: "#f8f6f2" }}
-									/>
-									<div
-										className="relative min-w-42.5 py-4 px-6 text-center shadow-lg"
-										style={{ background: "#f8f6f2" }}
-									>
-										{children.map((child) => (
-											<Link
-												key={child.href}
-												href={child.href}
-												style={{
-													fontFamily: "'Inter',sans-serif",
-													fontSize: "0.62rem",
-													letterSpacing: "0.12em",
-													textTransform: "uppercase",
-													fontWeight: 500,
-													color: "#777",
-													textDecoration: "none",
-												}}
-												className="block py-1.5 whitespace-nowrap hover:text-black transition-colors"
-											>
-												{child.label}
-											</Link>
-										))}
-									</div>
-								</div>
-							</div>
-						) : (
-							<Link
-								key={href}
-								href={href}
-								style={{
-									fontFamily: "'Inter',sans-serif",
-									fontSize: "0.65rem",
-									letterSpacing: "0.14em",
-									textTransform: "uppercase",
-									fontWeight: 500,
-									color: "#555",
-									textDecoration: "none",
-								}}
-								className="hover:text-black transition-colors"
-							>
-								{label}
-							</Link>
-						),
-					)}
-				</nav>
+							),
+						)}
+					</nav>
 
-				<Link href="/contact" className="btn-dark">
-					Work With Us
-				</Link>
+					<Link href="/contact" className="btn-dark rounded-full">
+						Work With Us
+					</Link>
+				</div>
 			</div>
 		</header>
 	);

@@ -26,7 +26,7 @@ export default function KeepExploring({
             <h2 style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: "clamp(2rem,4vw,2.8rem)", fontWeight: 400, color: "#111", marginBottom: "16px" }}>
               {leftTitle}
             </h2>
-            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
+            <p style={{ fontFamily: "'Barlow',sans-serif", fontSize: "0.85rem", color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
               {leftText}
             </p>
             <Link href={leftHref} className="btn-outline-dark rounded-full">
@@ -55,7 +55,7 @@ export default function KeepExploring({
             <h2 style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: "clamp(2rem,4vw,2.8rem)", fontWeight: 400, color: "#111", marginBottom: "16px" }}>
               {rightTitle}
             </h2>
-            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
+            <p style={{ fontFamily: "'Barlow',sans-serif", fontSize: "0.85rem", color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
               {rightText}
             </p>
             <Link href={rightHref} className="btn-outline-dark rounded-full">

@@ -113,7 +113,7 @@ export default function Footer() {
 				<div className="max-w-7xl mx-auto px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.65rem",
 							color: "#444",
 							letterSpacing: "0.06em",

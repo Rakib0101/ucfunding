@@ -31,7 +31,7 @@ export default function PageHero({ eyebrow, title, italicWord, subtitle, ctaText
       <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.25)" }} />
       <div className="relative z-10 max-w-3xl mx-auto px-6 py-20">
         {eyebrow && (
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "20px" }}>
+          <p style={{ fontFamily: "'Barlow',sans-serif", fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: "20px" }}>
             {eyebrow}
           </p>
         )}
@@ -39,7 +39,7 @@ export default function PageHero({ eyebrow, title, italicWord, subtitle, ctaText
           {renderTitle()}
         </h1>
         {subtitle && (
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.8, marginTop: "20px", maxWidth: "480px", margin: "20px auto 0" }}>
+          <p style={{ fontFamily: "'Barlow',sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.8, marginTop: "20px", maxWidth: "480px", margin: "20px auto 0" }}>
             {subtitle}
           </p>
         )}

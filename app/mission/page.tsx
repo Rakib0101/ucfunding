@@ -43,7 +43,7 @@ export default function MissionPage() {
 				<div className="max-w-2xl mx-auto">
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.9rem",
 							color: "#444",
 							lineHeight: 2,
@@ -59,7 +59,7 @@ export default function MissionPage() {
 					</p>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.9rem",
 							color: "#444",
 							lineHeight: 2,
@@ -75,7 +75,7 @@ export default function MissionPage() {
 					</p>
 					<p
 						style={{
-							fontFamily: "'Inter',sans-serif",
+							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.9rem",
 							color: "#444",
 							lineHeight: 2,

@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Barlow', 'Helvetica Neue', Helvetica, sans-serif;
   color: #1a1a1a;
   line-height: 1.6;
 }
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   .btn-dark {
     background: #111111;
     color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   .btn-outline-dark {
     border: 1px solid #111111;
     color: #111111;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   .btn-outline-white {
     border: 1px solid #ffffff;
     color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .label-eyebrow {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.16em;
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid #cccccc;
     padding: 10px 0;
     font-size: 0.85rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     color: #1a1a1a;
     background: transparent;
     outline: none;
