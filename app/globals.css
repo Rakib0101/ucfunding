@@ -1,104 +1,114 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gold: #c9a96e;
-  --color-dark: #111111;
-  --color-warm-bg: #f8f6f2;
+	--color-gold: #c9a96e;
+	--color-dark: #111111;
+	--color-warm-bg: #f8f6f2;
 }
 
 @utility container {
-  max-width: 1280px;
+	max-width: 1280px;
 }
 
 body {
-  font-family: 'Barlow', 'Helvetica Neue', Helvetica, sans-serif;
-  color: #1a1a1a;
-  line-height: 1.6;
+	font-family: "Barlow", "Helvetica Neue", Helvetica, sans-serif;
+	color: #1a1a1a;
+	line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Cormorant Garamond", Georgia, serif;
+	line-height: 1.2;
 }
 
 @layer components {
-  .btn-dark {
-    background: #111111;
-    color: #ffffff;
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 12px 24px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .btn-dark:hover {
-    background: #333333;
-  }
+	.btn-dark {
+		background: #111111;
+		color: #ffffff;
+		font-family: "Barlow", sans-serif;
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		padding: 12px 24px;
+		display: inline-block;
+		text-decoration: none;
+		transition: background 0.2s;
+	}
+	.btn-dark:hover {
+		background: #333333;
+	}
 
-  .btn-outline-dark {
-    border: 1px solid #111111;
-    color: #111111;
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 11px 24px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-  }
-  .btn-outline-dark:hover {
-    background: #111111;
-    color: #ffffff;
-  }
+	.btn-outline-dark {
+		border: 1px solid #111111;
+		color: #111111;
+		font-family: "Barlow", sans-serif;
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		padding: 11px 24px;
+		display: inline-block;
+		text-decoration: none;
+		transition:
+			background 0.2s,
+			color 0.2s;
+	}
+	.btn-outline-dark:hover {
+		background: #111111;
+		color: #ffffff;
+	}
 
-  .btn-outline-white {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 11px 24px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-  }
-  .btn-outline-white:hover {
-    background: #ffffff;
-    color: #111111;
-  }
+	.btn-outline-white {
+		border: 1px solid #ffffff;
+		color: #ffffff;
+		font-family: "Barlow", sans-serif;
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		padding: 11px 24px;
+		display: inline-block;
+		text-decoration: none;
+		transition:
+			background 0.2s,
+			color 0.2s;
+	}
+	.btn-outline-white:hover {
+		background: #ffffff;
+		color: #111111;
+	}
 
-  .label-eyebrow {
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #999999;
-  }
+	.label-eyebrow {
+		font-family: "Barlow", sans-serif;
+		font-size: 0.65rem;
+		font-weight: 500;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: #999999;
+	}
 
-  .form-field {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #cccccc;
-    padding: 10px 0;
-    font-size: 0.85rem;
-    font-family: 'Barlow', sans-serif;
-    color: #1a1a1a;
-    background: transparent;
-    outline: none;
-  }
-  .form-field::placeholder {
-    color: #aaaaaa;
-  }
-  .form-field:focus {
-    border-bottom-color: #111111;
-  }
+	.form-field {
+		width: 100%;
+		border: none;
+		border: 1px solid #cccccc;
+		padding: 10px 0;
+		font-size: 0.85rem;
+		font-family: "Barlow", sans-serif;
+		color: #1a1a1a;
+		background: transparent;
+		outline: none;
+		padding: 12px;
+	}
+	.form-field::placeholder {
+		color: #aaaaaa;
+	}
+	.form-field:focus {
+		border-bottom-color: #111111;
+	}
 }
