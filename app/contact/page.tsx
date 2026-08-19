@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
 	title: "Contact Us | United Capital Partners",
@@ -87,69 +88,7 @@ export default function ContactPage() {
 							After you fill out the form below, one of our team members will
 							get in touch directly about your inquiry.
 						</p>
-						<form className="space-y-5">
-							<div className="grid grid-cols-2 gap-6">
-								<div>
-									<label
-										htmlFor="firstName"
-										className="mb-1 block text-sm font-medium"
-									>
-										First Name
-									</label>
-									<input
-										className="form-field"
-										type="text"
-										placeholder="First Name"
-										required
-									/>
-								</div>
-								<div>
-									<label
-										htmlFor="lastName"
-										className="mb-1 block text-sm font-medium"
-									>
-										Last Name
-									</label>
-									<input
-										className="form-field"
-										type="text"
-										placeholder="Last Name"
-										required
-									/>
-								</div>
-							</div>
-							<label htmlFor="email" className="mb-1 block text-sm font-medium">
-								Email Address
-							</label>
-							<input
-								className="form-field"
-								type="email"
-								placeholder="Email Address"
-								required
-							/>
-							<label htmlFor="phone" className="mb-1 block text-sm font-medium">
-								Phone Number
-							</label>
-							<input
-								className="form-field"
-								type="tel"
-								placeholder="Phone Number"
-							/>
-							<label
-								htmlFor="message"
-								className="mb-1 block text-sm font-medium"
-							>
-								How can we help you?
-							</label>
-							<textarea
-								className="form-field resize-none"
-								rows={4}
-								placeholder="Message"
-							/>
-							<button type="submit" className="btn-dark px-8 mt-2 rounded-full">
-								Send Your Message
-							</button>
-						</form>
+						<ContactForm />
 					</div>
 
 					{/* Contact info */}
