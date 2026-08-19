@@ -16,7 +16,7 @@ export default function Footer() {
 						/>
 						<div className="flex gap-3">
 							<a
-								href="mailto:info@unitedcapitalpartners.com"
+								href="mailto:murray@ucapitalfl.com"
 								aria-label="Email"
 								className="text-gray-50 hover:text-white transition-colors"
 							>
