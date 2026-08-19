@@ -125,7 +125,7 @@ export default function Home() {
 							margin: "2rem auto 0",
 						}}
 					>
-						United Capital Partners is a leader in capital facilities,
+						United Capital Corp is a leader in capital facilities,
 						structured finance solutions, asset-based equipment lending, venture
 						leasing, and small to mid-ticket leasing solutions.
 					</p>

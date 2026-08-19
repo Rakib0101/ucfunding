@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
 	title: "Sample Transactions",
 	description:
-		"A representative sample of transactions completed by United Capital Partners.",
+		"A representative sample of transactions completed by United Capital Corp.",
 	alternates: { canonical: "/transactions" },
 };
 

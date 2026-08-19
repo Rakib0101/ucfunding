@@ -9,7 +9,7 @@ export default function Footer() {
 					<div className="md:col-span-1">
 						<Image
 							src="/logo.png"
-							alt="UCP"
+							alt="UCC"
 							width={120}
 							height={52}
 							className="object-contain mb-4 invert opacity-80"
@@ -102,7 +102,7 @@ export default function Footer() {
 							letterSpacing: "0.06em",
 						}}
 					>
-						© 2022 UNITED CAPITAL PARTNERS, LLC | PRIVACY POLICY | DESIGN BY
+						© 2022 UNITED CAPITAL CORP, LLC | PRIVACY POLICY | DESIGN BY
 						VALENCIA CREATIVE CO.
 					</p>
 				</div>

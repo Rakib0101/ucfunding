@@ -5,13 +5,13 @@ import ContactForm from "@/components/ContactForm";
 export const metadata = {
 	title: "Contact Us",
 	description:
-		"Get in touch with United Capital Partners. Located in the heart of Miami, FL.",
+		"Get in touch with United Capital Corp. Located in the heart of Miami, FL.",
 	alternates: { canonical: "/contact" },
 };
 
 const faqs = [
 	{
-		q: "What types of businesses does UCP work with?",
+		q: "What types of businesses does UCC work with?",
 		a: "We work with small businesses and middle-market companies across a broad range of industries, from technology and healthcare to manufacturing and professional services.",
 	},
 	{
@@ -47,7 +47,7 @@ export default function ContactPage() {
 					</h1>
 					<p className="mt-6 text-base tracking-wide leading-relaxed text-white max-w-xl mx-auto font-normal">
 						Whether you'd like to schedule a consultation or have questions
-						about our offerings, the UCP team is here to help.
+						about our offerings, the UCC team is here to help.
 					</p>
 					<div style={{ marginTop: "28px" }}>
 						<a

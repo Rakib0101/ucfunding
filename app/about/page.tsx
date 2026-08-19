@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
 	title: "About",
 	description:
-		"United Capital Partners LLC — financial services experts you can trust.",
+		"United Capital Corp LLC — financial services experts you can trust.",
 	alternates: { canonical: "/about" },
 };
 
@@ -65,7 +65,7 @@ const whyItems = [
 			</svg>
 		),
 		title: "Proven Track Record",
-		text: "United Capital Partners has provided millions to emerging and established businesses across a wide variety of industries.",
+		text: "United Capital Corp has provided millions to emerging and established businesses across a wide variety of industries.",
 	},
 	{
 		icon: (
@@ -118,7 +118,7 @@ export default function AboutPage() {
 							marginBottom: "20px",
 						}}
 					>
-						About United Capital Partners
+						About United Capital Corp
 					</p>
 					<h1
 						style={{
@@ -142,7 +142,7 @@ export default function AboutPage() {
 							margin: "20px auto 0",
 						}}
 					>
-						United Capital Partners works with a team of finance professionals
+						United Capital Corp works with a team of finance professionals
 						with an average twenty years of experience in funding equipment
 						leasing and working capital loans.
 					</p>
@@ -154,7 +154,7 @@ export default function AboutPage() {
 				</div>
 			</section>
 
-			{/* ── WHY UCP ── */}
+			{/* ── WHY UCC ── */}
 			<section className="bg-white py-20 text-center px-6">
 				<div className="max-w-2xl mx-auto">
 					<p className="label-eyebrow mb-4">What Sets Us Apart</p>
@@ -166,7 +166,7 @@ export default function AboutPage() {
 							color: "#111",
 						}}
 					>
-						Why United Capital Partners?
+						Why United Capital Corp?
 					</h2>
 				</div>
 				<div className="max-w-5xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">

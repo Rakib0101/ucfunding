@@ -4,7 +4,7 @@ import { news, slugify } from "@/lib/news";
 export const metadata = {
 	title: "News & Updates",
 	description:
-		"The latest news, transactions, and announcements from United Capital Partners.",
+		"The latest news, transactions, and announcements from United Capital Corp.",
 	alternates: { canonical: "/news" },
 };
 

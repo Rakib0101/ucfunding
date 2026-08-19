@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 const SITE_URL = "https://ucapitalfl.com";
 const SITE_NAME = "United Capital Corp";
 const SITE_DESCRIPTION =
-  "United Capital Partners LLC provides customizable capital solutions including equipment leasing, asset-based lending, factoring, and more.";
+  "United Capital Corp LLC provides customizable capital solutions including equipment leasing, asset-based lending, factoring, and more.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

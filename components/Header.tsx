@@ -8,7 +8,7 @@ export default function Header() {
 				<Link href="/" className="flex items-center gap-3">
 					<Image
 						src="/logo.png"
-						alt="United Capital Partners"
+						alt="United Capital Corp"
 						width={160}
 						height={80}
 						className="object-contain w-40 h-auto"
@@ -22,7 +22,7 @@ export default function Header() {
 								label: "About",
 								href: "/about",
 								children: [
-									{ label: "About UCP", href: "/about" },
+									{ label: "About UCC", href: "/about" },
 									{ label: "Our Mission", href: "/mission" },
 								],
 							},

@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
 	title: "Thank You",
 	description:
-		"Thanks for reaching out to United Capital Partners — we'll be in touch soon.",
+		"Thanks for reaching out to United Capital Corp — we'll be in touch soon.",
 	robots: { index: false, follow: true },
 };
 
