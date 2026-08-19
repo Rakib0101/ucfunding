@@ -98,7 +98,7 @@ export default function Footer() {
 						style={{
 							fontFamily: "'Barlow',sans-serif",
 							fontSize: "0.65rem",
-							color: "#444",
+							color: "#fff",
 							letterSpacing: "0.06em",
 						}}
 					>
