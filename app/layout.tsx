@@ -3,13 +3,52 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const SITE_URL = "https://ucapitalfl.com";
+const SITE_NAME = "United Capital Corp";
+const SITE_DESCRIPTION =
+  "United Capital Partners LLC provides customizable capital solutions including equipment leasing, asset-based lending, factoring, and more.";
+
 export const metadata: Metadata = {
-  title: "United Capital Partners | Commercial Finance Solutions",
-  description: "United Capital Partners LLC provides customizable capital solutions including equipment leasing, asset-based lending, factoring, and more.",
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | Commercial Finance Solutions`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "equipment leasing",
+    "venture debt",
+    "asset-based lending",
+    "factoring",
+    "purchase order financing",
+    "working capital loans",
+    "commercial finance",
+    "United Capital Corp",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} | Commercial Finance Solutions`,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} | Commercial Finance Solutions`,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
 };
 

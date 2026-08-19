@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-	title: "About | United Capital Partners",
+	title: "About",
 	description:
 		"United Capital Partners LLC — financial services experts you can trust.",
+	alternates: { canonical: "/about" },
 };
 
 const whyItems = [

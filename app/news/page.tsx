@@ -2,9 +2,10 @@ import Link from "next/link";
 import { news, slugify } from "@/lib/news";
 
 export const metadata = {
-	title: "News & Updates | United Capital Corp",
+	title: "News & Updates",
 	description:
 		"The latest news, transactions, and announcements from United Capital Partners.",
+	alternates: { canonical: "/news" },
 };
 
 const PAGE_SIZE = 5;

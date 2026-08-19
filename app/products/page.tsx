@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Products & Services | United Capital Partners",
+	title: "Products & Services",
 	description:
 		"Customizable capital solutions for your business — equipment leasing, factoring, venture debt, and more.",
+	alternates: { canonical: "/products" },
 };
 
 const products = [

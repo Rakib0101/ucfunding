@@ -3,9 +3,10 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-	title: "Contact Us | United Capital Partners",
+	title: "Contact Us",
 	description:
 		"Get in touch with United Capital Partners. Located in the heart of Miami, FL.",
+	alternates: { canonical: "/contact" },
 };
 
 const faqs = [

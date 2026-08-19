@@ -2,6 +2,10 @@ import KeepExploring from "@/components/KeepExploring";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+	alternates: { canonical: "/" },
+};
+
 const threeIcons = [
 	{
 		icon: (

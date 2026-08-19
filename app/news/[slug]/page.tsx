@@ -17,8 +17,9 @@ export async function generateMetadata({
 	const item = news.find((n) => slugify(n.title) === slug);
 	if (!item) return {};
 	return {
-		title: `${item.title} | United Capital Corp`,
+		title: item.title,
 		description: item.excerpt,
+		alternates: { canonical: `/news/${slug}` },
 	};
 }
 

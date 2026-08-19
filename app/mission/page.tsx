@@ -2,9 +2,10 @@ import KeepExploring from "@/components/KeepExploring";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Our Mission | United Capital Partners",
+	title: "Our Mission",
 	description:
 		"United Capital Partners is dedicated to providing small businesses and middle-market companies with capital solutions that meet their specific financing needs.",
+	alternates: { canonical: "/mission" },
 };
 
 export default function MissionPage() {

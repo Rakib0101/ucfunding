@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Sample Transactions | United Capital Partners",
+	title: "Sample Transactions",
 	description:
 		"A representative sample of transactions completed by United Capital Partners.",
+	alternates: { canonical: "/transactions" },
 };
 
 const transactionGroups = [
